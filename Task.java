@@ -1,8 +1,9 @@
 class Task{
-    private String name, description, priority;  
+    private String name, description;
+    private Prioritys priority;  
     private boolean completed;
     
-    public Task(String name, String description, String priority){
+    public Task(String name, String description, Priority priority){
         this.name = name;
         this.description = description;
         this.priority = priority;

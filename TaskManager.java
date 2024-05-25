@@ -1,3 +1,5 @@
+import java.sql.*;
+import java.util.*;
 
 public class TaskManager{
     private List<Task> taskList;
@@ -13,11 +15,11 @@ public class TaskManager{
 
     //Metodo para eliminar pelicula por id
     public void DeleteTask(String name){
-        taskList.removeIf(t -> p.getName() == name);
+        taskList.removeIf(t -> t.getName().equals(name);
     }
 
     //Metodo para mostrar tareas pendientes por prioridad
-    public PendingTask(){
+    public void PendingTask(){
         taskList.stream()
                 .filter(task -> !task.isCompleted())
                 .sorted(Comparator.comparing(Task::getPriority))
@@ -25,7 +27,7 @@ public class TaskManager{
     }
 
     //Metodo para marcar tareas como completadas
-    public void CompletedTask(){
+    public void CompletedTask(String name){
         for (Task task : taskList) {
             if (task.getName().equals(name)) {
                 task.setCompleted(true);
